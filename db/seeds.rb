@@ -21,3 +21,12 @@ comments = []
 end
 
 Comment.import(comments)
+
+BEERS = %w[IPA borwn_ale pilsner lager lambic hefeweizen]
+beers = []
+
+BEERS.each do |beer|
+  beers << Beer.new(beer_type: beer)
+end
+
+Beer.import(beers)

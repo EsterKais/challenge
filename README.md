@@ -4,10 +4,6 @@
 2. Bundle install
 3. Run rake db:setup
 
-**Notes:**
-
-As this is just a sample app and the purpose was to just set up models andrelationships, I made no controllers/views.
-
 # Answers
 
 ## First:
@@ -79,6 +75,8 @@ I could even go crazy with making pure SQL queries here instead of using rails t
     (1.4ms)  COMMIT
 ```
 
-## Third: please refer to `app/models/person.rb` for children & grandchildren and either `db/schema.rb` or `db/migrate/20180113150222_create_people.rb` for DB setup.
+## Third:
+Please refer to `app/models/person.rb` for children & grandchildren and either `db/schema.rb` or `db/migrate/20180113150222_create_people.rb` for DB setup.
 
 ## Fourth:
+Please refer to `config/routes.rb` and `app/controllers/beers_controller.rb`
