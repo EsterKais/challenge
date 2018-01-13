@@ -10,13 +10,16 @@
 
 ## First Task:
 
-This was the very first idea:
-
-`SELECT issue_date FROM payments ORDER BY amount DESC LIMIT 1;`
-
-But this seemed more sophisticated:
-
-`SELECT issue_date FROM  payments where amount=(select max(amount) from payments);`
+```
+  SELECT
+  CAST(`issue_date` AS DATE)
+  FROM `payments`
+  WHERE CAST(`issue_date` AS DATE)
+  BETWEEN '2016-01-01' AND '2016-12-31'
+  GROUP BY CAST(`issue_date` AS DATE)
+  ORDER BY SUM(`amount`) desc
+  LIMIT 1;
+```
 
 ## Second Task:
 ### Part 1:
