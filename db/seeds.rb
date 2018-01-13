@@ -30,3 +30,11 @@ BEERS.each do |beer|
 end
 
 Beer.import(beers)
+
+payments = []
+
+(1..100).each do |int|
+  payments << Payment.new(user_id: int, amount: int, issue_date: rand(Time.now - 2.years..Time.now - 1.years))
+end
+
+Payment.import(payments)
