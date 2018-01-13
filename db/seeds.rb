@@ -4,8 +4,6 @@ users = []
   users << User.new(username: Faker::Superhero.name)
 end
 
-# I know using activerecord-import gem is quite the overkill here,
-# but in reality, this can be a performance saviour.
 User.import(users)
 
 posts = []
